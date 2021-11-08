@@ -6,6 +6,7 @@ Slight Modifications were made for ease of use with APIC/cAPIC
 VM with ubuntu and docker/docker-compose installed.  If you don't have that, please look at the bottom of this README file
 
 # Steps to install:
+```
 1) You need to have a VM that's already running docker and docker-compose. In case you don't have this and need help, please see the bottom part or the readme file 
 2) git clone https://github.com/soumukhe/prometheus.git
 3) cd apic-prometheus/prometheus
@@ -29,7 +30,7 @@ VM with ubuntu and docker/docker-compose installed.  If you don't have that, ple
    80       insecure_skip_verify: true
    81 
    82 # Please add more APICs here for different fabrics as needed.  Remember you need APIC version >= 5.3  or cAPIC >=25.x
-
+```
 ```
 You should have 5 cotainers running as shown below:
 
