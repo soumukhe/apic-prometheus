@@ -6,9 +6,8 @@ Slight Modifications were made for ease of use with APIC/cAPIC
 VM with ubuntu and docker/docker-compose installed.  If you don't have that, please look at the bottom of this README file
 
 # Steps to install:
-1) ssh to ubuntu box and clone this repo:  git clone https://github.com/soumukhe/ndi-kafka-elasticsearch-kibana.git
-2) cd ndi-kafka-elasticsearch-kibana
-3) run the fixIP script with the IP of the VM.  For example  ./fixIP 10.10.140.10
+1) ssh to ubuntu box and clone this repo:  git clone https://github.com/soumukhe/apic-prometheus.git
+2) cd apic-prometheus
 3) docker-compose up -d 
 4) make sure to do a docker ps to verify that all 8 associated containers are up and running
 
