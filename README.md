@@ -32,7 +32,8 @@ VM with ubuntu and docker/docker-compose installed.  If you don't have that, ple
    82 # Please add more APICs here for different fabrics as needed.  Remember you need APIC version >= 5.3  or cAPIC >=25.x
 ```
 ```
-You should have 5 cotainers running as shown below:
+6) docker-compose up -d
+7) You should have 5 cotainers running as shown below:
 
 docker ps --format '{{ .Names }}' | sort |nl
      1  apic-prometheus_alertmanager_1
