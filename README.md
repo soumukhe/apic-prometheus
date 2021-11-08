@@ -12,26 +12,18 @@ VM with ubuntu and docker/docker-compose installed.  If you don't have that, ple
 4) make sure to do a docker ps to verify that all 8 associated containers are up and running
 
 ```
-You should have 8 cotainers running as shown below:
+You should have 5 cotainers running as shown below:
 
-aciadmin@DMZ-Ubuntu-Jump-User:~/ndi-kafka-elasticsearch-kibana$ docker ps --format '{{ .Names }}' | sort |nl
-     1  broker
-     2  elasticsearch
-     3  kafkacat
-     4  kafka-connect
-     5  kibana
-     6  ksqldb
-     7  schema-registry
-     8  zookeeper
-     
-after the containers come up, please repeat the command "docker ps --format '{{ .Names }}' | sort |nl"  after a few minutes.
-What I noticed is that ksqldb might have crashed.  If this is the case,  just do "docker-compose up -d" again and then ksqldb will be stable
-
-you can always check logs for ksqldb by:   docker logs -f ksqldb
-    
+docker ps --format '{{ .Names }}' | sort |nl
+     1  apic-prometheus_alertmanager_1
+     2  apic-prometheus_cadvisor_1
+     3  apic-prometheus_grafana_1
+     4  apic-prometheus_node-exporter_1
+     5  apic-prometheus_prometheus_1
+        
 ```
 
-# Configuring NDI to export data:
+# Configuring for APIC and Prometheus:
 Please see unofficalaciguide.com
 
 # In case you don't have a vm with docker/docker-compose, follow these steps first to install:
