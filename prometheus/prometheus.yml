@@ -61,22 +61,25 @@ scrape_configs:
       - 'tasks.node-exporter'
       type: 'A'
       port: 9100
-  - job_name: 'aws-capic'
+      
+  - job_name: 'aws-capic'        # Please change this and put in an appropriate job name here like Fabric1-apic
     scheme: https
     metrics_path: '/nodeexporter/metrics'
     static_configs:
-            - targets: ['54.165.192.81']
+            - targets: ['x.x.x.x']    # Please change this and substitute your IP for APIC here
     tls_config:
       insecure_skip_verify: true
 
 
-  - job_name: 'azure-capic'
+  - job_name: 'azure-capic'       # Please change this and put in an appropriate job name here like Fabric1-apic
     scheme: https
     metrics_path: '/nodeexporter/metrics'
     static_configs:
-      - targets: ['52.188.141.123']
+      - targets: ['y.y.y.y']    # Please change this and substitute your IP for APIC here
     tls_config:
       insecure_skip_verify: true    
+
+# Please add more APICs here for different fabrics as needed.  Remember you need APIC version >= 5.3  or cAPIC >=25.x
 
 
 #  - job_name: 'pushgateway'
