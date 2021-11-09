@@ -71,7 +71,7 @@ scrape_configs:
       insecure_skip_verify: true
 
 
-  - job_name: 'azure-capic'       # Please change this and put in an appropriate job name here like Fabric1-apic
+  - job_name: 'azure-capic'       # Please change this and put in an appropriate job name here like Fabric2-apic
     scheme: https
     metrics_path: '/nodeexporter/metrics'
     static_configs:
@@ -79,7 +79,7 @@ scrape_configs:
     tls_config:
       insecure_skip_verify: true    
 
-# Please add more APICs here for different fabrics as needed.  Remember you need APIC version >= 5.3  or cAPIC >=25.x
+# Please add more jobs for APICs here for different fabrics as needed.  Remember you need APIC version >= 5.3  or cAPIC >=25.x
 
 
 #  - job_name: 'pushgateway'
